@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Elite Fitness</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="main">
+        <header class="header">
+            <div class="left">
+                <img src="Elite fitness (logo-1).png" alt="">
+            </div>
+            <div class="mid">
+                <ul class="navbar">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="EXERCISE.html">EXERCISE</a></li>
+                    <li><a href="DIET_PLAN.html">DIET PLAN</a></li>
+                    <li><a href="ABOUT_US.html">ABOUT US</a></li>
+                    <li><a href="CONTACT_US.html" class="active">CONTACT US</a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <button class="btn"><a href="https://mail.google.com">Email</a></button>
+                <button class="btn"><a href="CONTACT_US.html">Call US</a></button>
+            </div>
+        </header>
+
+        <div class="contact-container">
+            <h1>Contact Us</h1>
+            <form id="contactForm" action="submit_query.php" method="post" class="contact-form" onsubmit="return validateForm()">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    <small class="error" id="nameError"></small>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <small class="error" id="emailError"></small>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Write your message here" required></textarea>
+                    <small class="error" id="messageError"></small>
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function validateForm() {
+            // Clear previous error messages
+            document.getElementById('nameError').innerText = '';
+            document.getElementById('emailError').innerText = '';
+            document.getElementById('messageError').innerText = '';
+
+            let isValid = true;
+
+            // Get form elements
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            // Regular expression for validating email
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+            // Name validation: must not be empty
+            if (name === '') {
+                document.getElementById('nameError').innerText = 'Name is required';
+                isValid = false;
+            }
+
+            // Email validation: must follow the pattern
+            if (!emailPattern.test(email)) {
+                document.getElementById('emailError').innerText = 'Enter a valid email';
+                isValid = false;
+            }
+
+            // Message validation: must not be empty
+            if (message === '') {
+                document.getElementById('messageError').innerText = 'Message is required';
+                isValid = false;
+            }
+
+            // If any field is invalid, prevent the form from submitting
+            return isValid;
+        }
+    </script>
+
+</body>
+</html>

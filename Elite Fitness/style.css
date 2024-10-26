@@ -1,0 +1,273 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    font-family: "Akaya Kanadaka", system-ui;
+}
+#main{
+    /* margin: 0px;
+    padding: 0px; */
+    content: "";
+    background: url(pexels-goumbik-669578.jpg)no-repeat center center/cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* top: 50px; */
+}
+.header{
+    background: lightblue;
+}
+.left{
+    position: absolute;
+    left: 35px;
+    top: 15px;
+    /* border: 2px solid red; */
+    display: inline-block;
+
+}
+.left img{
+    width: 235px;
+    height: 180px;
+    border-radius: 50%;
+}
+.mid{
+    display: block;
+    /* border: 2px solid green; */
+    width: 65%;
+    margin: 50px auto;
+
+}
+.right{
+    position: absolute;
+    right: 34px;
+    top: 20px;
+    display: inline-block;
+    /* border: 2px solid orange; */
+
+}
+.navbar{
+    display: inline-block;
+}
+.navbar li{
+    display: inline-block;
+    font-size: 26px;
+}
+.navbar li a{
+    color: white;
+    text-decoration: none;
+    padding: 8px 41px;
+}
+.navbar li a:hover, .navbar li a.active{
+    text-decoration: underline;
+    color: rgb(54, 51, 51);
+}
+.btn{
+    margin: 6px 10px;
+    background-color: black;
+    color: white;
+    padding: 6px 16px;
+    border: 2px solid;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 17px;
+    font-family: "Akaya Kanadaka", system-ui;
+}
+.btn:hover{
+    color: blue;
+}
+.btn a:hover{
+    color: blue;
+}
+.btn a{
+    text-decoration: none;
+    color: white;
+}
+.container{
+    border: 0px solid pink;
+    border-radius: 9px;
+    margin: auto;
+    padding: 0px 0px;
+    width: 55%;
+}
+.container h1{
+    text-align: center;
+    margin-bottom: 45px;
+    font-size: 68px;
+    color: #05645e;
+}
+.form-group input{
+    font-family: "Akaya Kanadaka", system-ui;
+    text-align: center;
+    display: block;
+    width: 489px;
+    padding: 3px;
+    border: 3px solid black;
+    margin: 15px auto;
+    font-size: 26px;
+    border-radius: 25px;
+
+}
+.container button{
+    display: block;
+    width: 50%;
+    margin: 8px auto;
+    padding: 8px;
+}
+.container button a:hover{
+    color: blue;
+}
+
+/* Excise page css */
+
+.container1{
+    /* border: 2px solid orangered; */
+    padding: 2px;
+    margin: 3px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.div11{
+    background-color: #dbdbdbc2;
+    border: 2px solid black;
+    width: 408px;
+    height: 218px;
+    margin: 6px;
+    border-radius: 24px;
+    flex: auto;
+    text-align: center;
+    padding: 20px;
+}
+.container1 .div11 img{
+    /* margin: auto 24px; */ 
+    border: 4px solid white;
+    border-radius: 24px;
+    height: 160px;
+    width: 440px;
+}
+
+
+/* Diet page css */
+
+
+.container2{
+    /* border: 2px solid orange; */
+    padding: 2px;
+    margin: 3px;
+    display: flex;
+}
+.plan{
+    text-align: center;
+    background-color: #dbdbdbc2;
+    border: 2px solid black;
+    width: 100%;
+    height: 488px;
+    margin: 10px;
+    /* margin-top: 6px; */
+    padding: 18px;
+    border-radius: 20px;
+
+}
+.plan:hover{
+    color: #05645e;
+}
+.plan img{
+    border: 2px solid black;
+    border-radius: 20px;
+    height: 90%;
+    width: 100%;
+}
+.plan h3{
+    margin-top: -3px;
+    margin-bottom: 17px;
+    font-size: 27px;
+}
+
+
+/* About US page css */
+
+.container3{
+    border: 3px solid #ffffff;
+    padding: 2px;
+    border-radius: 72px;
+    margin: 3px;
+    display: flex;
+    margin-top: 112px;
+}
+.about1{
+    border: 4px solid black;
+    border-radius: 72px;
+    text-align: center;
+    background-color: #dbdbdbc2;
+    width: 100%;
+    margin: 25px;
+    padding: 15px;
+    color: #6f5dc9;
+}
+.about1:hover{
+    color: #221587;
+}
+
+
+
+/* Contact US page css */
+
+.contact-container {
+    width: 30%;
+    margin: auto;
+    background-color: #dbdbdbc2;
+    border: 2px solid black;
+    padding: 13px;
+    border-radius: 15px;
+    color: black;
+    margin-top: 30px;
+}
+
+.contact-container h1 {
+    text-align: center;
+    color: #05645e;
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    color: #221587;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+    width: 88%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 3px solid #ccc;
+    border-radius: 28px;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    
+    resize: vertical;
+}
+
+.contact-form .btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.contact-form .btn:hover {
+    color: blue;
+}
